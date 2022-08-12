@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js"
+      lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Web Docs worklog, August 2021 edition</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="manifest"
+          href="site.webmanifest">
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet"
+          href="/css/normalize.css">
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container">
+          <span class="pull">
+            <li><a href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </span>
+          <span class="flex-container center">
+            <li><a href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a href="/content/posts">Blog</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="pri-btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </span>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post">
+        <h1>Open Web Docs worklog, August 2021 edition</h1>
+        <p>Florian Scholz</p>
+        <p>Welcome to the seventh edition of the OWD worklog. This series reports on our workstream activities and contributions we’re making to open web documentation projects, like MDN Web Docs. We had a fantastic month! In this edition, you can find a summary of what we accomplished in August 2021.</p>
+<h2>Estelle Weyl joined the team</h2>
+<p>We’re super excited to announce that Estelle Weyl joined our team as a full-time Sr. Technical Writer and Developer Advocate. Please join us in welcoming her and read more in the <a href="https://opencollective.com/open-web-docs/updates/estelle-weyl-joins-open-web-docs-staff">announcement post</a>!</p>
+<h2>Open Web Docs signs the Diversity Charter</h2>
+<p>We signed the <a href="https://diversitycharter.org">https://diversitycharter.org</a>. Diversity and inclusion at conferences and events, (and everywhere) is important because we want them to be better for everyone.</p>
+<blockquote>
+<p>Open Web Docs supports web platform documentation for the benefit of web developers &amp; designers worldwide. We intend to emphasize diversity and inclusion across all our efforts including project contributions, community organization, tech events, and resource allocation.<br>
+— Florian Scholz, on behalf of Open Web Docs.</p>
+</blockquote>
+<p>Read the <a href="https://github.com/openwebdocs/project/blob/main/diversity-inclusion.md">full statement</a> on our GitHub repository.</p>
+<h2>Content work</h2>
+<h3>WebXR reference docs</h3>
+<p>We wrote new reference pages for <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API#webxr_reference_docs">WebXR APIs</a>. A total of 56 new pages have been contributed and the following Augmented Reality modules are now documented on MDN Web Docs:</p>
+<ul>
+<li>WebXR Anchors: <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRAnchor">XRAnchor</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRAnchorSet">XRAnchorSet</a></code></li>
+<li>WebXR Depth Sensing: <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRDepthInformation">XRDepthInformation</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRCPUDepthInformation">XRCPUDepthInformation</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRWebGLDepthInformation">XRWebGLDepthInformation</a></code></li>
+<li>WebXR Hit Testing: <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestSource">XRHitTestSource</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestSource">XRTransientInputHitTestSource</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRHitTestResult">XRHitTestResult</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRTransientInputHitTestResult">XRTransientInputHitTestResult</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRRay">XRRay</a></code></li>
+<li>WebXR Lighting Estimation: <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightEstimate">XRLightEstimate</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRLightProbe">XRLightProbe</a></code></li>
+</ul>
+<p>Thanks to Ada Rose Cannon (Samsung Internet), Dominic Cooney (Facebook), and Joe Medley (Google) for helping with reviews and code examples for this work, and for all that they do.</p>
+<p>There is an open issue about <a href="https://github.com/mdn/content/issues/7276">updating the MDN WebXR guide material</a> as well. Let us know what you think about the plan. In the meantime, to play with these exciting new APIs, see Ada’s post on <a href="https://medium.com/samsung-internet-dev/use-new-augmented-reality-features-with-just-a-few-lines-of-code-with-webxr-and-aframe-c6f3f5789345">how to use new AR features with WebXR and AFrame</a>.</p>
+<p>The work on the reference docs will continue in September when we will add missing content for VR modules like Hand Input and Layers. See our <a href="https://github.com/openwebdocs/project/issues/35">tracking issue</a> for a list of APIs we’ve identified.</p>
+<h3>Markdown</h3>
+<p>We converted several sections of the docs into Markdown, including:</p>
+<ul>
+<li>CSS: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a></li>
+<li>HTTP: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">https://developer.mozilla.org/en-US/docs/Web/HTTP</a></li>
+<li>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API">WebXR part</a> of the Web/API documentation</li>
+</ul>
+<p>We’re currently at 2,374 pages in Markdown and 9,393 in HTML. We’ve also been working on converting the Web/API documentation (more than 6,000 pages) and expect to publish that in September.</p>
+<h3>HTTP/2</h3>
+<p>This month we did the preparation work to document HTTP/2. We started by converting our HTTP documentation to Markdown, then made a plan for 6 new documents about HTTP/2. The next step is to actually write them 😜</p>
+<h3>ARIA roles</h3>
+<p>We started work on converting the ARIA roles section to Markdown, updating all the roles, and creating new reference pages for some missing ARIA roles. We also worked on improving linkages within accessibility documentation, and from roles to semantic HTML that should be used instead of ARIA.</p>
+<h3>PR reviews</h3>
+<p>In August we reviewed 332 pull requests to GitHub repositories in the <a href="https://github.com/mdn">https://github.com/mdn</a> organization.</p>
+<h2>Next month</h2>
+<p>In September, we’re planning to:</p>
+<ul>
+<li>Finish converting Web/API documentation to Markdown, and make a good start on the remaining parts of the docs.</li>
+<li>Add more WebXR reference docs</li>
+<li>Finish documenting HTTP/2.</li>
+<li>Finish documenting all the ARIA roles</li>
+</ul>
+<p>And this concludes our August update! Until next month, when we return to update you about our September activities, you can reach us at <a href="https://twitter.com/OpenWebDocs">@OpenWebDocs</a>. Want to join us? Visit <a href="https://openwebdocs.org">https://openwebdocs.org</a>.</p>
+<hr>
+<p><em>Originally published at https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-august-2021-edition.</em></p>
+
+    </article>
+
+<footer class="sec-footer">
+    <section class="footer-sponsors-list center">
+        <h3 class="center">Sponsors</h3>
+        <ul class="flex-container center">
+            <li><img src="/img/edge.png"
+                     alt="Microsoft Edge logo"></li>
+            <li><img src="/img/meta-light.svg"
+                     alt="Meta logo"></li>
+            <li><img src="/img/coil.png"
+                     alt="Coil logo"></li>
+            <li><img src="/img/canva.png"
+                     alt="Canva logo"></li>
+            <li><img src="/img/igalia.png"
+                     alt="Igalia logo"></li>
+            <li><img src="/img/google.png"
+                     alt="Google logo"></li>
+            <li><img src="/img/jetbrains.png"
+                     alt="JetBrains logo"></li>
+        </ul>
+    </section>
+
+    <section id="socials">
+        <ul class="flex-container center">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon"></a></li>
+        </ul>
+        <small class="center">Open Web Docs 2022</small>
+    </section>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

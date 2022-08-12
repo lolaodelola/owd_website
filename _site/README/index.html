@@ -1,0 +1,38 @@
+<h1>Open Web Docs</h1>
+<p>This is the codebase for <a href="https://openwebdocs.com">Open Web Docs</a>, it's run using <a href="https://www.11ty.dev/">11ty</a> and
+you'll need to <a href="https://www.11ty.dev/docs/getting-started/#step-2-install-eleventy">install it</a> to run the codebase locally.</p>
+<h2>Run Locally</h2>
+<p>Once you've installed 11ty, you can run this codebase locally by running <code>@npx @11ty/eleventy --serve</code> in your
+terminal. This will create a <code>_site</code> directory which will include all the site files. You shouldn't make changes to
+these files, instead you'll want to make changes to files and directories in the root directory. If you want to
+include a new directory that you want outputted to the browser, you'll need to add it to the list of dircetories in
+<code>.eleventy.js</code>; for example:</p>
+<pre><code class="language-js">    // Copy `img/` to `_site/img`
+  eleventyConfig.addPassthroughCopy(&quot;img&quot;);
+</code></pre>
+<p>adds the <code>img</code> directory to <code>_site</code> so that it can be output to the browser.</p>
+<h2>Contribution</h2>
+<h3>Gotchas</h3>
+<p>There are some things to be aware of when making changes.</p>
+<ol>
+<li>The index/home page doesn't use the same footer as the rest of the pages. If you're making changes to the footer
+ensure that you don't need to change the index footer <strong>and</strong> <code>_includes/partials/footer.njk</code>.</li>
+<li>The <code>theme.css</code> includes rules for <code>prefers-color-scheme(&quot;dark&quot;)</code> and <code>body.dark</code> which are exactly
+the same this is so that folks can use dark mode regardless of their system preferences. If you make changes to one, ensure you
+make changes to the other.
+<ol>
+<li>If you're making changes to dark mode ensure that you're prefacing all new rules with <code>body.dark</code> and <code>body. systemDarkPreference</code> respectively.</li>
+</ol>
+</li>
+<li>For collections (posts, reports, worklog), there is an accomponying json file which includes global rules for the
+files that live in the related directory; for example:<pre><code class="language-json">{
+  &quot;layout&quot;: &quot;layouts/post.njk&quot;,
+  &quot;tags&quot;: [
+     &quot;post&quot;
+ ]
+}
+</code></pre>
+This is setting the layout for all posts and ensures that each post has the tag <code>post</code> so that all posts can be
+included in the posts collection.</li>
+<li>If you create a file that you don't want included in a collection, include <code>eleventyExcludeFromCollections: true</code> in the front-matter.</li>
+</ol>

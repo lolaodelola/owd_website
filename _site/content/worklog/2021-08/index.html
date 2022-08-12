@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js"
+      lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Web Docs worklog, September 2021 edition</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container center nav-list">
+          <div class="pull">
+            <li><a class="nav-item" href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </div>
+          <div class="flex-container center">
+            <li><a class="nav-item" href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a class="nav-item" href="/content/posts">Blog</a></li>
+            <li><a class="nav-item" href="/team">Team</a></li>
+            <li><a class="nav-item" href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </div>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post auto xl-paragraph">
+        <h1>Open Web Docs worklog, September 2021 edition</h1>
+        <p>Florian Scholz</p>
+        <p>Welcome to the eighth edition of the OWD worklog. This series reports on our workstream activities and contributions we’re making to open web documentation projects, like MDN Web Docs. Another great month! In this edition, you can find a summary of what we accomplished in September 2021.</p>
+<h3>Markdown</h3>
+<p>This was a big month in the project to convert MDN’s content into Markdown. At the start of the month we had 2,374 pages in Markdown and 9,393 in HTML.</p>
+<p>This month we converted:</p>
+<ul>
+<li>Web/API docs</li>
+<li>SVG docs</li>
+<li>HTML docs</li>
+</ul>
+<p>We’re now at 9034 pages in Markdown and 2881 in HTML:</p>
+<p><img src="/posts/worklog/mdn-md-august.png" alt="MDN markdown in August. 20% converted to md, 80% in HTML"></p>
+<p><img src="/posts/worklog/mdn-md-september.png" alt="MDN markdown in September. 75% converted to md, 25% in HTML"></p>
+<p>We expect to complete this project in October.</p>
+<h3>ARIA roles</h3>
+<p>The ARIA roles received a facelift, with 64 ARIA role pages converted to markdown and completed; including all the document structure, landmark, live region, window, and abstract roles, with a total of 30 new pages. Shout out to <a href="https://github.com/ericwbailey">@ericwbailey</a> for reviewing the huge PR - <a href="https://github.com/mdn/content/pull/9305">https://github.com/mdn/content/pull/9305</a>. Composite widget roles are currently being written/rewritten.</p>
+<p>New pages include:</p>
+<ul>
+<li>Update of all the **Document structure roles **with 12 new roles: directory, toolbar, tooltip, math, none,  note, presentation, definition, columnheader, rowheader, separator, and group roles</li>
+<li>A update or rewrite of all the <strong>landmark roles</strong></li>
+<li>Update of all the <strong>live region roles</strong>,with three new pages: log, marquee, and status roles</li>
+<li>Update of all the <strong>window roles</strong>,with one new page: alertdialog</li>
+<li>Addition of all the <strong>abstract roles</strong> for completeness of documentation, with 12 new pages, including: command, composite, input, landmark, range, roletype, section, sectionhead, select, structure, widget and window roles.</li>
+<li>There are also two new <strong>widget roles</strong>: combobox, and radio. Work has started on writing those two and all the others</li>
+</ul>
+<p>The ARIA Roles landing page has also been updated, grouping all roles by role type with explanatory text.</p>
+<h3>WebXR reference docs</h3>
+<p>Following up from the work in August, we’ve managed to finish adding reference docs for WebXR APIs.</p>
+<p>In September, we added pages for WebXR Layers:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRLayer">XRLayer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRLayerEvent">XRLayerEvent</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRCompositionLayer">XRCompositionLayer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRProjectionLayer">XRProjectionLayer</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRCubeLayer">XRCubeLayer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRCylinderLayer">XRCylinderLayer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/XREquirectLayer">XREquirectLayer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/XRQuadLayer">XRQuadLayer</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRMediaBinding">XRMediaBinding</a></li>
+</ul>
+<p>And for WebXR Hand Input:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/XRHand">XRHand</a></li>
+</ul>
+<p>Dominic Cooney (Facebook) is working on providing the compatibility data for these features and for the Oculus browser. See <a href="https://github.com/mdn/browser-compat-data/issues/12303">this BCD issue</a>.</p>
+<p>As this project completes, we’ve documented features from 10 WebXR specifications and written 131 new MDN reference pages!</p>
+<h3>PR reviews</h3>
+<p>In September we reviewed 373 pull requests to GitHub repositories in the <a href="https://github.com/mdn">https://github.com/mdn</a> organization.</p>
+<h3>Write The Docs Prague – Writing Day</h3>
+<p>Write The Docs is a well-established conference about tech writing and its European edition is held in Prague. This year, due to COVID-19, the event is online only.</p>
+<p>On October 1st, in collaboration with Daniel Beck (MDN Web Docs, Mozilla) and Lola Odelola (Samsung Internet), Florian and Jean-Yves led a whole day workshop at <a href="https://www.writethedocs.org/conf/prague/2021/">Write The Docs Prague</a>. We got up to 28 participants (for an estimated total of about 70 people that day). The participants were introduced to both OWD and MDN Web Docs, and to contribute using Github.</p>
+<p>Three tasks were proposed:</p>
+<ul>
+<li>Editorial copy-edition of the HTTP section. The wording in this area has been significantly improved.</li>
+<li>Preparation of the Markdown migration where participants fixed the HTML of the Accessibility section to ease its future migration.</li>
+<li>A brainstorming session by Lola about &quot;Documenting how to Document&quot;.</li>
+</ul>
+<p>Overall, <a href="https://github.com/mdn/content/pulls?q=+is%3Apr+label%3A%22Event%3A+Write+the+Docs+Prague+2021%22">63 Pull Requests</a> have been made. This was a great success!</p>
+<h3>Q4 projects</h3>
+<p>The Open Web Docs Steering Committee took part in an open prioritization process. 14 members of the SC handed in their ranked list and we've calculated an overall rank. The results have been published in the <a href="https://github.com/openwebdocs/project/issues/55#issuecomment-937625420">Q4 planning issue</a>. The team will get work started on the top 5 ranked projects:</p>
+<ol>
+<li><a href="https://github.com/openwebdocs/project/issues/65">ARIA attributes</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/50">Updating DOM guides (and completing its reference)</a></li>
+<li><a href="https://github.com/mdn/content/blob/main/rfcs/modernize-learn-js.md">Modernizing the Learning Area JavaScript modules</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/61">Documenting events and representing them in BCD</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/44">Use webref as the source for CSS formal syntax, instead of mdn/data</a></li>
+</ol>
+<h3>Next month</h3>
+<p>In October, we’re planning to:</p>
+<ul>
+<li>Finish some projects from Q3 (Markdown conversion, ARIA roles, HTTP docs).</li>
+<li>Get work started on the new Q4 projects.</li>
+<li>Florian will give a talk “Documenting the Web Platform” at <a href="https://pages.jetbrains.com/javascript-day-2021/blog">JetBrains JavaScript Day</a>.</li>
+<li>Participate in <a href="https://www.w3.org/wiki/TPAC/2021/SessionIdeas">TPAC breakout sessions</a>.</li>
+</ul>
+<p>And this concludes our September update! Until next month, when we return to update you about our October activities, you can reach us at <a href="https://twitter.com/OpenWebDocs">@OpenWebDocs</a>. Want to join us? Visit <a href="https://opencollective.com/open-web-docs">https://openwebdocs.org</a>.</p>
+<hr>
+<p><em>Originally published at https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-september-2021-edition.</em></p>
+
+    </article>
+
+<footer class="sec-footer">
+    <div id="socials">
+        <ul class="flex-container center nav-list">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon gh"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon tw"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon oc"></a></li>
+        </ul>
+        <small class="flex-container center">Open Web Docs 2022</small>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

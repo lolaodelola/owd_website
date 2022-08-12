@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js"
+      lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Web Docs worklog, May 2021 edition</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container center nav-list">
+          <div class="pull">
+            <li><a class="nav-item" href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </div>
+          <div class="flex-container center">
+            <li><a class="nav-item" href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a class="nav-item" href="/content/posts">Blog</a></li>
+            <li><a class="nav-item" href="/team">Team</a></li>
+            <li><a class="nav-item" href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </div>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post auto xl-paragraph">
+        <h1>Open Web Docs worklog, May 2021 edition</h1>
+        <p>Florian Scholz</p>
+        <p>Welcome to the fifth edition of the OWD worklog! This series reports on our workstream activities and contributions we’re making to open web documentation projects, like MDN Web Docs.</p>
+<h3>This month</h3>
+<h3>MDN Markdown conversion</h3>
+<p>At the moment we write MDN pages directly in HTML. This is hard to write and hard to review. It's easy to make mistakes like missing closing tags or getting the nesting wrong, and it's hard for reviewers to spot these kinds of mistakes. Also, we have to escape HTML tags in any example code we write, which is difficult and error-prone. In practice, this makes writers concentrate so much on the markup that it's hard to concentrate on the writing itself.</p>
+<p>So in Q2 we started a project to convert the authoring format into GitHub Flavored Markdown. We're starting with the JavaScript documentation, which represents about 1000 pages, or one tenth of the total number of en-US pages in MDN.</p>
+<p>This month we've continued work on this project:</p>
+<ul>
+<li>We’ve resolved all the major issues about how we will represent MDN content in Markdown, and written up a specification for it: <a href="https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN">https://developer.mozilla.org/en-US/docs/MDN/Contribute/Markdown_in_MDN</a>.</li>
+<li><a href="https://github.com/Gregoor">Gregor Weber</a> has been implementing this specification, as well as a converter to get us from our current HTML into our target Markdown format, and updating the Yari tooling so it works with Markdown source.</li>
+<li>We’ve cleaned the JavaScript docs to the point where we can start test runs of the converter, and the result is looking really promising. We’re close to the point where we can ask people to start trying it out and look for problems, and soon after that we will be able to roll it out.</li>
+<li>Looking to the future, we’re cleaning up other areas of the content to make them Markdown-friendly: we’ve removed almost all inline styles from the CSS pages and have started removing them from the Web API pages: <a href="https://github.com/mdn/content/issues/5438">https://github.com/mdn/content/issues/5438</a>.</li>
+</ul>
+<h3>Specification sections</h3>
+<p>In May, we continued working on MDN’s Specification sections.</p>
+<ul>
+<li><a href="https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-april-2021-edition">As mentioned in the April worklog</a>, <a href="https://github.com/sideshowbarker">Mike Smith</a> and Florian finished adding relevant specifications to BCD features.</li>
+<li>Florian also <a href="https://github.com/mdn/browser-compat-data/pull/10681">wrote a PR</a> that will check spec_urls in BCD against the <a href="https://github.com/w3c/browser-specs">w3c/browser-specs</a> repository to make sure we only use relevant specifications.</li>
+<li>The MDN JavaScript docs and the MDN HTML docs now make use of these specification URLs from BCD.</li>
+<li>The other MDN doc sets now have the <code>browser-compat</code> front-matter thanks to the pull requests of <a href="https://github.com/teoli2003">Jean-Yves Perrier</a>. In June, we can build upon this work and roll out the BCD-powered specification tables more broadly to finish up this project.</li>
+</ul>
+<h3>Browser compat data</h3>
+<p>We’re continuing to help with improving the browser-compat-data project.</p>
+<ul>
+<li>After previous discussions within the BCD community and browser vendors, Florian made <a href="https://github.com/mdn/browser-compat-data/pull/10334">a proposal to add preview browsers</a> to the project. This will help with recording support data for browsers like Firefox Nightly, Chrome Canary, and Safari Technical Preview. Caniuse is already well equipped to show this information and in June Florian will work on the MDN Yari renderer to allow this to work with MDN compat tables, too. If you are a BCD consumer, you might want to check out the enhanced data structure which we plan to make available in a BCD 4.0.0 release.</li>
+</ul>
+<h3>PR reviews</h3>
+<p>In May we reviewed 300 pull requests to GitHub repositories in the <a href="https://github.com/mdn">https://github.com/mdn</a> organization.</p>
+<h3>Next month</h3>
+<p>In June, we’re planning to:</p>
+<ul>
+<li>Finish interviewing applicants for our Tech Writer / Advocate position to welcome a new team member really soon!</li>
+<li>Get together for quarterly planning meetings, so we can determine documentation projects we’d like to work on in Q3.</li>
+<li>Finish our current projects as much as possible.</li>
+</ul>
+<p>And this concludes our May update! We will be back updating you about our June activities. Please follow the <a href="https://twitter.com/OpenWebDocs">@OpenWebDocs</a> Twitter channel for updates in the meantime.</p>
+<h3>A special thank you to Chris Mills</h3>
+<p>Chris Mills <a href="https://twitter.com/chrisdavidmills/status/1399687177588592642">announced</a> his last day as Mozilla’s MDN Content Lead after taking good care of it for just under 8 years. We would like to use this opportunity to say thank you! Chris really made a difference to MDN and impacted millions of web developers over the years. The <a href="https://hacks.mozilla.org/2020/07/mdn-web-docs-15-years-young/">MDN 15th anniversary blog post</a> highlights some of the bright projects Chris' leadership made possible within the MDN team.</p>
+<p>All the best for your new endeavours from Jory, Will, Florian and the rest of the Open Web Docs crew!</p>
+<hr>
+<p><em>Originally published at https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-may-2021-edition.</em></p>
+
+    </article>
+
+<footer class="sec-footer">
+    <div id="socials">
+        <ul class="flex-container center nav-list">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon gh"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon tw"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon oc"></a></li>
+        </ul>
+        <small class="flex-container center">Open Web Docs 2022</small>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

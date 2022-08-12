@@ -1,0 +1,141 @@
+<!doctype html>
+<html class="no-js"
+      lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Write the Docs Writing Day</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container center nav-list">
+          <div class="pull">
+            <li><a class="nav-item" href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </div>
+          <div class="flex-container center">
+            <li><a class="nav-item" href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a class="nav-item" href="/content/posts">Blog</a></li>
+            <li><a class="nav-item" href="/team">Team</a></li>
+            <li><a class="nav-item" href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </div>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post auto xl-paragraph">
+        <h1>Write the Docs Writing Day</h1>
+        <p>Will Bamberg</p>
+        <p>Open Web Docs hosted a session at the <a href="https://www.writethedocs.org/conf/portland/2022/writing-day/">Writing Day</a> during the <a href="https://www.writethedocs.org/conf/portland/2022/">Portland 2022 edition of the Write the Docs conference</a>. In this post we'll talk about what we worked on and how it went.</p>
+<p>Write the Docs is a conference for people involved with all aspects of documentation, including writers, developers, editors, information architects and so on. It happens twice a year, once in Portland and once in Prague. The Sunday before the main conference is the &quot;Writing Day&quot;, when people come to work on open source documentation projects.</p>
+<p>Open Web Docs loves Write the Docs, in part because it's extremely inclusive, welcoming people from all kinds of disciplines that relate to documentation. This makes it an interesting place, where everyone knows different things, and everyone can learn something. We sponsored the Portland 2022 Write the Docs and hosted a session at the Writing Day for people who wanted to contribute to MDN.</p>
+<h2>Preparation</h2>
+<p>We prepared a few projects for participants. The two that resonated most with people were:</p>
+<ul>
+<li>removing <code>var</code> from our JavaScript documentation</li>
+<li>fixing sidebars in the Web API documentation.</li>
+</ul>
+<h3>Removing var</h3>
+<p>In the old days JavaScript used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"><code>var</code></a> to declare variables. For a long time now this is considered bad practice, and it's recommended that people should use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> or <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> instead. In early 2022 Open Web Docs updated the JavaScript Learn documentation on MDN to replace usages of <code>var</code> in code examples, but we didn't yet update the JavaScript reference documentation.</p>
+<p>In preparation for the Writing Day we made a list of 300 pages that mentioned <code>var</code>, and asked attendees to replace it with <code>let</code> or <code>const</code> as appropriate.</p>
+<h3>Fixing sidebars</h3>
+<p>On MDN sidebars are added to pages using macros. We made a list of all the pages under <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs</a> that were missing a sidebar, and asked attendees to add the correct macro call. This amounted to about 50 pages.</p>
+<h2>On the day</h2>
+<p>From Open Web Docs, Will Bamberg, Estelle Weyl and Queen Vinyl Da.i’gyu-Kazotetsu were there to host the session, and we were joined by about 20 volunteers. We walked through the process of editing a page on MDN using the GitHub UI and explained the activities.</p>
+<p>From then the session was very quiet, as volunteers worked hard all day filing GitHub PRs to fix the problems, and OWD staff reviewed them and answered the occasional question.</p>
+<p>Many people stayed for the whole day and filed dozens of PRs.</p>
+<p>At the end of it:</p>
+<ul>
+<li>we cleaned <code>var</code> from 254 pages in the JavaScript reference, out of 300 pages that were using it</li>
+<li>we added sidebars to all pages under <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs</a> that were missing a sidebar, with the exception of only four, which all need more complex fixes.</li>
+</ul>
+<p>Especially the removal of <code>var</code> is a substantial improvement to MDN Web Docs. <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables#a_note_about_var">Our own documentation advises against the use of <code>var</code></a>, so it's very misleading for our JavaScript examples to use it, and the work of our volunteers made a big step towards removing it completely.</p>
+<h2>What we learned</h2>
+<p>We learned, first, what we already knew, that Write the Docs attendees are welcoming, engaging, generous, and generally a pleasure to work with.</p>
+<p>Many attendees did not have previous experience of working with GitHub, the PR model, or docs under source control. It was helpful to have an introductory session about this. As it turned out, the technical side went smoothly. People quickly understood how to use the tools and were able to be very productive. It might have been worth spending more time up front exploring other tools, which would enable people to submit fewer, larger PRs: a limitation of the GitHub UI is that each PR can only include one file. In general it's worth organizers explicitly considering what they are giving back to attendees in terms of learning how to use these tools.</p>
+<p>Successful projects tend to be ones that are well-defined and fine-grained, meaning that even a small contribution can be complete and useful. Next time we would like to prepare some projects which allow volunteers to engage more deeply with the content, but it's challenging to do that while still keeping projects accessible.</p>
+<h2>What's next?</h2>
+<p>We've felt quite inspired by the progress our volunteers made towards cleaning <code>var</code> from our documentation, and have filed <a href="https://github.com/mdn/content/issues/16614">a tracking issue to finish removing <code>var</code> from our JavaScript pages</a>, and <a href="https://github.com/mdn/content/issues/16662">another one to remove it from our Web/API pages</a>, so that volunteers and staff can finish the work.</p>
+<p>We'd also like to consider how we could help writers who are new to Git and GitHub learn how to work with these tools.</p>
+<h2>Thanks!</h2>
+<p>Finally of course we'd like to thank Write the Docs, for enabling such a great community, and the volunteers who spent their Sunday helping to improve MDN:</p>
+<ul>
+<li><a href="https://github.com/adeobas">adeobas</a></li>
+<li><a href="https://github.com/bwklein">bwklein</a></li>
+<li><a href="https://github.com/carriemacfarlane">carriemacfarlane</a></li>
+<li><a href="https://github.com/ceedgedev">ceedgedev</a></li>
+<li><a href="https://github.com/christopher-besch">christopher-besch</a></li>
+<li><a href="https://github.com/davidchesnut">davidchesnut</a></li>
+<li><a href="https://github.com/jmswisher">jmswisher</a></li>
+<li><a href="https://github.com/Linda-Ikechukwu">Linda-Ikechukwu</a></li>
+<li><a href="https://github.com/nataleecodes">nataleecodes</a></li>
+<li><a href="https://github.com/nbarbarick">nbarbarick</a></li>
+<li><a href="https://github.com/rkathrn">rkathrn</a></li>
+<li><a href="https://github.com/samantharamon">samantharamon</a></li>
+<li><a href="https://github.com/seumoo">seumoo</a></li>
+<li><a href="https://github.com/tech-writer-jill">tech-writer-jill</a></li>
+<li><a href="https://github.com/valeriahhdez">valeriahhdez</a></li>
+<li><a href="https://github.com/vandanarv411">vandanarv411</a></li>
+<li><a href="https://github.com/WaiReid-5">WaiReid-5</a></li>
+</ul>
+
+    </article>
+
+<footer class="sec-footer">
+    <div id="socials">
+        <ul class="flex-container center nav-list">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon gh"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon tw"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon oc"></a></li>
+        </ul>
+        <small class="flex-container center">Open Web Docs 2022</small>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

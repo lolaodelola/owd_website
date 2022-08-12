@@ -1,0 +1,16 @@
+{% if pagination.pageLinks.length > 1 %}
+    <ul class="flex-container pagination">
+      {% if pagination.previousPageLink %}
+        <li><a href="{{ pagination.previousPageHref | url }}">Previous Page</a></li>
+      {% else %}
+        <li>Previous Page</li>
+      {% endif %}
+
+
+      {% if pagination.nextPageLink %}
+        <li><a href="{{ pagination.nextPageHref | url }}">Next Page</a></li>
+      {% else %}
+        <li>Next Page</li>
+      {% endif %}
+    </ul>
+{% endif %}

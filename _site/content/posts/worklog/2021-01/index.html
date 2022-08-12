@@ -1,0 +1,168 @@
+<!doctype html>
+<html class="no-js"
+      lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Web Docs worklog, January 2021 edition</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="manifest"
+          href="site.webmanifest">
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet"
+          href="/css/normalize.css">
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container">
+          <span class="pull">
+            <li><a href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </span>
+          <span class="flex-container center">
+            <li><a href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a href="/content/posts">Blog</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="pri-btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </span>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post">
+        <h1>Open Web Docs worklog, January 2021 edition</h1>
+        <p>Florian Scholz</p>
+        <p>In January, Open Web Docs was launched publicly and we’ve seen enormous support from the community. Thanks to the many of you who supported our collective already! We’re planning to update you about our workstream activities on a monthly basis and this is our first update post. Let’s look into what we’ve been working on so far!</p>
+<h2>Open governance</h2>
+<p>As outlined in our <a href="https://opencollective.com/open-web-docs/updates/introducing-open-web-docs">launch statement</a>, Open Web Docs is an open collective project designed to support and maintain web platform technology documentation. We’re here to ensure the long-term health of web platform documentation on de facto standard resources like <a href="https://developer.mozilla.org">MDN Web Docs</a>, independently of any single vendor or organization.</p>
+<p>To reach those goals, Open Web Docs is openly <a href="https://github.com/openwebdocs/project#governance">governed</a> by two committees: the OWD governance committee and the OWD steering committee.</p>
+<ul>
+<li>Our governance committee administers the financial sponsorships made via <a href="https://opencollective.com/open-web-docs">opencollective.com</a>, and explores strategic partnerships and needs for web documentation projects.</li>
+<li>Our steering committee develops and implements shared public roadmaps for key documentation priorities, and facilitates community involvement and execution of those priorities.</li>
+</ul>
+<p>Both committees met weekly throughout January to bootstrap the project and prepare the public launch; for transparency, all the <a href="https://github.com/openwebdocs/project/tree/main/steering-committee/meetings/2021">steering committee meeting notes</a> are available in our GitHub project.</p>
+<p>We’ve also agreed on <a href="https://github.com/openwebdocs/project/blob/main/2021-goals.md">high-level goals</a> for the year. These give you an overview of what we’re hoping to accomplish in 2021 using our initial funding. Key goals for this year are to contribute to MDN Web Docs and to establish Open Web Docs as a long-term function that ensures that Web platform documentation is maintained via diverse funding.</p>
+<p>The steering committee also agreed on <a href="https://github.com/openwebdocs/project/blob/main/steering-committee/membership-expectations.md">membership expectations</a> and came up with <a href="https://github.com/openwebdocs/project/blob/main/steering-committee/prioritization-criteria.md">prioritization guidelines</a> to fulfill OWD’s core values as outlined in our <a href="https://github.com/openwebdocs/project/blob/main/charter.md">charter</a>.</p>
+<p>As an openly-governed project, we will be transparent about our activities. We are here to serve the web community and we hold ourselves accountable to work as an independent project.</p>
+<h2>Establishing a working relationship with MDN</h2>
+<p>After <a href="https://hacks.mozilla.org/2020/12/welcome-yari-mdn-web-docs-has-a-new-platform/">MDN’s launch on GitHub</a>, the Open Web Docs steering committee started brainstorming how to contribute to MDN effectively going forward. Chris Mills, MDN Content Lead at Mozilla and an Open Web Docs Steering Committee member, is leading an effort to come up with a content roadmap, shared between OWD and MDN.</p>
+<p>One outcome is already implemented: We’re holding weekly MDN editorial meetings where Technical Writers from the various organizations and the community come together to discuss MDN documentation.</p>
+<p>Additionally, <a href="https://twitter.com/floscholz">Florian Scholz</a> — our first hire and OWD Content Lead</p>
+<ul>
+<li>has been given merge privileges on <a href="https://github.com/mdn/content">mdn/content</a></li>
+<li>is a codeowner/reviewer for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript docs</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP docs</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web API docs</a>, and <a href="https://developer.mozilla.org/en-US/docs/MDN">MDN contribution docs</a></li>
+<li>reviews PRs opened by the community on a daily basis.</li>
+</ul>
+<p>Florian also continues to act as a <a href="https://github.com/mdn/browser-compat-data/blob/master/GOVERNANCE.md#owners">co-owner</a> of the <a href="https://github.com/mdn/browser-compat-data">mdn/browser-compat-data</a> project and helps Daniel Beck to run the project that powers the compat tables on MDN and caniuse.</p>
+<h2>Contributions to MDN content</h2>
+<p>We met with Mozilla <a href="https://github.com/mdn/yari">Yari</a> engineers to discuss how to change the source format from HTML to markdown and also proposed that Mozilla adopt a public RFC (“request for comments”) process for MDN so that bigger questions like a source format change can be discussed in a transparent and structured form. Work on this is tracked in <a href="https://github.com/mdn/pab/issues/82">mdn/pab/issues/82</a>.</p>
+<p>Some MDN content structures aren’t as clear as they should be; several discussions have been started and feedback is welcome:</p>
+<ul>
+<li><a href="https://github.com/mdn/content/issues/1006">Web APIs and inheritance</a></li>
+<li><a href="https://github.com/mdn/content/issues/1940">Web APIs and mix-ins</a></li>
+<li><a href="https://github.com/mdn/content/issues/1948">Web APIs and dictionaries</a></li>
+<li><a href="https://github.com/mdn/browser-compat-data/issues/7545">Events</a></li>
+</ul>
+<p>Some new documentation got written by Florian:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/EXT_texture_norm16">WebGL extension EXT_texture_norm16</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_multi_draw">WebGL extension WEBGL_multi_draw</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/getContextAttributes">CanvasRenderingContext2D.getContextAttributes</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">HTML global attribute enterkeyhint</a> (<a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/enterKeyHint">HTMLElement.enterKeyHint</a>)</li>
+<li><a href="http://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/nonce">HTML global attribute nonce</a></li>
+</ul>
+<p>Other notable documentation updates:</p>
+<ul>
+<li><a href="https://github.com/mdn/content/pull/304">WebGL 2 is no longer marked as experimental</a></li>
+<li>Empathy is key in documentation and calling things out as “simple” is not very inclusive. Florian <a href="https://github.com/mdn/content/pull/360">removed the word “simply”</a> from all MDN docs.</li>
+</ul>
+<h2>Contributions to browser-compat-data (BCD)</h2>
+<ul>
+<li>MDN readers love the fact that compat tables also include Node.js compat information. However, having old version numbers in there was causing <a href="https://github.com/mdn/browser-compat-data/issues/6861">confusion</a>. Thanks to feedback from the <a href="https://github.com/nodejs/Release">Node.js Release Working Group</a>, we were able to <a href="https://github.com/mdn/browser-compat-data/pull/7547">update</a> the data and come up with a policy for <a href="https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#initial-versions">initial versions</a> for all browsers in BCD.</li>
+<li>BCD itself wasn’t compatible with semver until recently. Daniel Beck and Florian <a href="https://github.com/mdn/browser-compat-data/issues/7563">sorted out semver for BCD and BCD 3.0.0 was released as a consequence.</a></li>
+<li>Florian defined a spec_url property for BCD a while ago and the W3C <a href="https://github.com/w3c/browser-compat-data">maintains a fork</a> that includes specification data (thanks to the work of Mike Smith). The ongoing goal is to review the spec data and merge it back into the upstream BCD repository. In the future, we would like spec sections on MDN to be <a href="https://github.com/mdn/content/issues/1146">sourced from BCD</a>.</li>
+</ul>
+<p>And this concludes our look into what we’ve been up to for a start! Please let us know your feedback and if there is anything you would like to see us working on.</p>
+<p>Our first Open Web Docs community webinar will be on 17 February at 17:00 UTC. <a href="https://calendar.google.com/calendar/u/0/r?cid=Y19vbGpyaTVyYmN1dGJmczkyb2ZwYTN1ajVzOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t">Subscribe to our calendar</a> to see the meeting details directly.</p>
+<p>PS: We were also able to agree on an Open Web Docs logo (for now)! 😅</p>
+<p>Let us know what you think about it! You can see it on our Twitter channel,  <a href="https://twitter.com/OpenWebDocs">@OpenWebDocs</a>.</p>
+<hr>
+<p><em>Originally published at https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-january-2021-edition.</em></p>
+
+    </article>
+
+<footer class="sec-footer">
+    <section class="footer-sponsors-list center">
+        <h3 class="center">Sponsors</h3>
+        <ul class="flex-container center">
+            <li><img src="/img/edge.png"
+                     alt="Microsoft Edge logo"></li>
+            <li><img src="/img/meta-light.svg"
+                     alt="Meta logo"></li>
+            <li><img src="/img/coil.png"
+                     alt="Coil logo"></li>
+            <li><img src="/img/canva.png"
+                     alt="Canva logo"></li>
+            <li><img src="/img/igalia.png"
+                     alt="Igalia logo"></li>
+            <li><img src="/img/google.png"
+                     alt="Google logo"></li>
+            <li><img src="/img/jetbrains.png"
+                     alt="JetBrains logo"></li>
+        </ul>
+    </section>
+
+    <section id="socials">
+        <ul class="flex-container center">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon"></a></li>
+        </ul>
+        <small class="center">Open Web Docs 2022</small>
+    </section>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

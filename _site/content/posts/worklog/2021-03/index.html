@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js"
+      lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Open Web Docs worklog, March 2021 edition</title>
+    <meta name="description"
+          content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <meta property="og:title"
+          content="">
+    <meta property="og:type"
+          content="">
+    <meta property="og:url"
+          content="">
+    <meta property="og:image"
+          content="">
+
+    <link rel="manifest"
+          href="site.webmanifest">
+    <link rel="apple-touch-icon"
+          href="/img/icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet"
+          href="/css/normalize.css">
+   <link rel="stylesheet"
+          href="/css/general.css">
+    <link rel="stylesheet"
+          href="/css/theme.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body class="systemDarkPreference">
+<header>
+    <nav>
+        <ul class="flex-container">
+          <span class="pull">
+            <li><a href="/"><img src="/img/webdocs_logo_light.svg"
+                                 alt="Open Web Docs logo"
+                                 id="logo"></a></li>
+          </span>
+          <span class="flex-container center">
+            <li><a href="/content/reports/2022/">2022 Impact Report</a></li>
+            <li><a href="/content/posts">Blog</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/contribute">Get Involved</a></li>
+            <li><a href="/donate"
+                   class="pri-btn">Donate</a></li>
+            <li id="toggleTheme"></li>
+          </span>
+        </ul>
+    </nav>
+</header>
+
+
+    <article class="post">
+        <h1>Open Web Docs worklog, March 2021 edition</h1>
+        <p>Will Bamberg</p>
+        <p>Welcome to the third edition of the OWD worklog! In this edition we'll talk about what we got up to in March 2021.</p>
+<p>The Open Web Docs Steering Committee provides feedback and guidance on priority work areas for OWD and on specific OWD projects. We're thrilled to welcome two new Steering Committee members this month:</p>
+<ul>
+<li>Michael[tm] Smith (aka <a href="https://github.com/sideshowbarker">@sideshowbarker</a>) on behalf of the W3C</li>
+<li>Eric Meyer (<a href="https://github.com/meyerweb">@meyerweb</a>) on behalf of Igalia.</li>
+</ul>
+<h3>Specification URLs</h3>
+<p>The “Specifications” section on MDN reference pages is used by web developers and even browser engineers to quickly find the exact and current definition of a web platform feature.</p>
+<p>Unfortunately, many specification sections on MDN link to outdated drafts or are just 404. Every specification section is authored manually as an HTML table. This means the tables are inconsistently presented, and any time we want to change the presentation we have to edit thousands of pages.</p>
+<p>Michael Smith and Florian Scholz continued to collaborate to get more up-to-date specification links into <a href="https://github.com/mdn/browser-compat-data">browser-compat-data</a> as a spec_url property, analogous to the already existing mdn_url reference. This has a few advantages:</p>
+<ul>
+<li>The specification URLs become machine-readable</li>
+<li>We have a mapping between MDN URL, specification URL, and compat data.</li>
+<li>Maintaining specification links becomes part of the process that already exists to keep browser compat data current and relevant.</li>
+<li>In the future, BCD can add tooling/linting so that outdated specification links aren’t allowed.</li>
+<li>Once MDN consumes spec data like compat data, we can control the rendering of that specification section from a central place and add functionality to it easily. This also makes sure that rendering will be made consistent across all of the MDN reference pages.</li>
+</ul>
+<p>In March, Mike and Florian finished adding specification URLs for CSS and HTTP features. JavaScript features are also recorded already. Getting into the large pile of specifications that define Web APIs is the next step.</p>
+<p>On MDN, we will work on implementing a mechanism that <a href="https://github.com/mdn/content/issues/1146">consumes this data from BCD</a>, so it should become a lot easier to have current specifications displayed. We might even go further and make it a matter of just requiring to <a href="https://github.com/mdn/yari/issues/3258">add a front-matter key</a> which will then make sure that compat data and specifications will be displayed.</p>
+<p>Let us know any feedback in our <a href="https://github.com/openwebdocs/project/issues/24">project issue</a> or in the individual issues.</p>
+<h3>Updating page lifecycle events</h3>
+<p>Developers often want to be notified about different stages of a user's interaction with a page: especially, at the point the user has finished with a page. Often they use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event">unload</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a> event for this, but this is not reliable, especially on mobile.</p>
+<p>This month we updated the docs for lifecycle events (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/unload_event">unload</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event">beforeunload</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event">pagehide</a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event">visibilitychange</a>) to recommend better practices here.</p>
+<h3>New CSS sidebar</h3>
+<p>We’ve known for a long time that the sidebar for the CSS reference on MDN isn’t as good as we’d like. This month we’ve reimplemented it to provide better navigation across the CSS docs, to expose useful pages and tools, and to simplify the sidebar architecture (<a href="https://github.com/mdn/yari/pull/3228">https://github.com/mdn/yari/pull/3228</a>).</p>
+<h3>Removing more mixin pages</h3>
+<p>As introduced in our February update, we were able to agree on a new documentation guideline for mixins. We’ve started working on refactoring these docs and the project is now described formally <a href="https://github.com/openwebdocs/project/issues/23">in our repository</a>.</p>
+<p>Florian reworked a few page trees here:</p>
+<ul>
+<li>The DocumentOrShadowRoot mixin is now properly documented under the Document and ShadowRoot page trees.</li>
+<li>The HTMLHyperlinkElementUtils mixin is now properly documented as  HTMLAnchorElement and HTMLAreaElement.</li>
+<li>NonDocumentTypeChildNode is not mentioned in the docs anymore. The members are documented properly under Element and CharacterData.</li>
+<li>Work is in progress to remove the ParentNode mixin page and document members under Document, DocumentFragment and Element.</li>
+</ul>
+<h3>PR reviews</h3>
+<p>In March Florian and Will reviewed 173 pull requests to GitHub repositories in the <a href="https://github.com/mdn">https://github.com/mdn</a> organization.</p>
+<h3>Planning Q2</h3>
+<p>We’ve spent some time this month planning Q2 projects and came up with this list of things we like to work on:</p>
+<ul>
+<li><a href="https://github.com/openwebdocs/project/issues/25">Converting MDN content to Markdown</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/23">Fixing mixin docs on MDN</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/26">Making MDN syntax boxes beginner friendly</a></li>
+<li><a href="https://github.com/openwebdocs/project/issues/24">Up-to-date &amp; machine readable specification links on MDN and in BCD</a></li>
+</ul>
+<p>There are more ideas in our <a href="https://github.com/openwebdocs/project">project repository</a>. If you have more ideas on content projects you’d like us to consider, please <a href="https://github.com/openwebdocs/project/issues">submit an issue on our project repository</a> or reach out to us in the comment section below!</p>
+<h3>Next month on MDN</h3>
+<p>Next month we’ll continue to fix up mixin docs and to add machine-readable specification URLs.</p>
+<p>We’ll also start the project to migrate MDN authoring format to Markdown. This is a joint project with the Mozilla MDN engineering team, who will be implementing tools to convert our HTML content into Markdown and adapting the Yari platform so it can render Markdown as MDN pages. Open Web Docs will be helping to figure out where we’ll have to extend GitHub-Flavored Markdown so it can support all the things MDN needs it to do, and also updating our content where necessary so it’s more Markdown-compatible. We're keeping track of the issues in <a href="https://github.com/mdn/content/projects/6">a GitHub project on the mdn/content repo</a>.</p>
+<p>And this concludes our March update! We will be back updating you about our April activities. Please follow the <a href="https://twitter.com/OpenWebDocs">@OpenWebDocs</a> Twitter channel for updates in the meantime.</p>
+<hr>
+<p><em>Originally published at https://opencollective.com/open-web-docs/updates/open-web-docs-worklog-march-2021-edition.</em></p>
+
+    </article>
+
+<footer class="sec-footer">
+    <section class="footer-sponsors-list center">
+        <h3 class="center">Sponsors</h3>
+        <ul class="flex-container center">
+            <li><img src="/img/edge.png"
+                     alt="Microsoft Edge logo"></li>
+            <li><img src="/img/meta-light.svg"
+                     alt="Meta logo"></li>
+            <li><img src="/img/coil.png"
+                     alt="Coil logo"></li>
+            <li><img src="/img/canva.png"
+                     alt="Canva logo"></li>
+            <li><img src="/img/igalia.png"
+                     alt="Igalia logo"></li>
+            <li><img src="/img/google.png"
+                     alt="Google logo"></li>
+            <li><img src="/img/jetbrains.png"
+                     alt="JetBrains logo"></li>
+        </ul>
+    </section>
+
+    <section id="socials">
+        <ul class="flex-container center">
+            <li><a href="https://github.com/openwebdocs"><img src="/img/github-dark.png"
+                                                          alt="GitHub logo icon"
+                                                          class="icon"></a></li>
+            <li><a href="https://twitter.com/OpenWebDocs"><img src="/img/twitter.png"
+                                                            alt="Twitter logo icon"
+                                                            class="icon"></a></li>
+            <li><a href="https://opencollective.com/open-web-docs"><img src="/img/opencollective.svg"
+                                                         alt="Open Collective logo icon"
+                                                         class="icon"></a></li>
+        </ul>
+        <small class="center">Open Web Docs 2022</small>
+    </section>
+</footer>
+
+<script src="/js/main.js"></script>
+
+
+</body>

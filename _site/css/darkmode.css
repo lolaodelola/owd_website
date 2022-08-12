@@ -1,0 +1,121 @@
+/* VARIABLES */
+
+:root {
+   /*BORDERS */
+  --divider: var(--accent-1) 1px solid;
+
+  /* COLORS */
+  --white: #FFFFFF;
+  --black: #000000;
+  --dark-bg: #090057;
+  --accent-1: rgb(200 182 249);
+  --accent-2: #f7f4fe00;
+  --clickable-1: #9900a1;
+  --clickable-2: #ff61e5;
+}
+
+/* LIGHT THEME */
+
+a {
+  color: var(--clickable);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: var(--underline);
+}
+
+.nav-item {
+  color: var(--black);
+  text-decoration: none;
+}
+
+nav-item:hover {
+  text-decoration: var(--underline);
+}
+
+.btn {
+  background-color: var(--clickable);
+  color: var(--white);
+  border-radius: 5px;
+  padding: var(--btn-padding);
+  border: none;
+  text-decoration: none;
+}
+
+#toggleTheme {
+  text-decoration: var(--underline) var(--clickable-1);
+  cursor: pointer;
+}
+
+header {
+  border-bottom: var(--divider);
+}
+
+.sec-footer {
+  border-top: var(--divider);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.systemDarkPreference {
+    background-color: var(--dark-bg);
+    color: var(--white);
+  }
+
+  body.systemDarkPreference nav a {
+    color: var(--white);
+  }
+
+  body.systemDarkPreference header {
+    border-bottom: var(--divider);
+  }
+
+  body.systemDarkPreference .sec-btn, body.systemDarkPreference .pri-btn  {
+    background-color: var(--clickable-1);
+    color: var(--white);
+}
+
+  body.systemDarkPreference a {
+    color: var(--clickable-2);
+  }
+
+  body.systemDarkPreference .sec-footer {
+    border-top: var(--divider);
+  }
+
+  body.systemDarkPreference button {
+    color: var(--white);
+  }
+
+  body.systemDarkPreference .bg-gradient {
+    background: none;
+  }
+}
+
+
+/* DEFAULT DARK MODE */
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+body.dark nav a {
+  color: var(--white);
+}
+
+body.dark .sec-btn, body.dark .pri-btn {
+  background-color: var(--clickable-1);
+  color: var(--white);
+}
+
+body.dark a {
+  color: var(--white);
+}
+
+body.dark button {
+  color: var(--white);
+}
+
+body.dark .bg-gradient {
+  background: none;
+}
